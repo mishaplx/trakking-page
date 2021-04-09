@@ -1,0 +1,314 @@
+@import url(/css/nullstyle.css);
+%font{
+    font-size: 18px;
+    color: white;
+    font-weight: 700;
+    letter-spacing: 3px;
+}
+@mixin font($fs,$fw, $ls,$col) {
+    font-size: $fs;
+    font-weight: $fw;
+    letter-spacing: $ls;
+    color: $col;
+}
+body{
+    font-family: 'Quicksand', sans-serif;
+}
+.wrapper{
+    margin: 0px 65px;
+    .content{
+        max-width: 1152px;
+        margin: 0 auto;
+        }
+}
+.header{
+    height: 787px;
+    background:url(/img/Livello.jpg);
+    background-repeat: no-repeat;
+    background-size:cover;
+
+}
+.block-flex{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    
+    .second{
+        height: 145px;
+    }
+    .men {
+        height: 490px;
+    }
+    .women {
+       margin-top: 125px;
+    }
+    .about {
+        margin-top: 125px;
+        height: 400px;
+        background: #aa9b77;
+    }
+    .footer {
+        height: 420px;
+        .footer__social{
+            height: 70px;
+            background: #535253;
+            @include font(16px, 400, 0px ,rgb(255,255,255));
+
+        }
+        .footer__end{
+            height: 350px;
+            background: #424242;
+        }
+    }
+    
+}
+.flex-header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 36px;
+}
+
+.nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 260px;
+
+    a{
+        @extend %font;
+        &:hover{
+            color: rgb(38, 184, 159);
+            transition: 0.2s;
+        }
+    }
+}
+
+.header-text{
+    width: 810px;
+    margin: 240px auto 0px;
+}
+.header__title{
+    font-family: 'Quicksand', sans-serif;
+    text-align: center;
+    @include font(60px, 900, 0px ,rgb(255,255,255));
+}
+.header__subtitle{
+    margin-top: 20px;
+    text-align: center;
+    line-height: 20px;
+    @include font(20px, 400, 3px ,rgb(255,255,255));
+}
+.arrow{
+    margin: 240px 630px 0px;
+}
+.second{
+    background:rgb(245,246,247);
+}
+.check{
+    
+    text-transform: uppercase;
+    div{
+        display: inline-block;
+        margin-right: 35px;
+        &:last-child{
+            margin: 0px;
+        }
+    }
+}
+input{
+    margin-right: 10px;
+    span{
+        @include font(18px, 400, 3px ,rgb(51,51,51));
+    }
+    &:checked{
+        color: rgb(170,155,119);
+        background-color: transparent;    }
+}
+.button{
+    width: 204px;
+    height: 55px;
+    background-color: #aa9b77;
+    text-transform: uppercase;
+}
+button{
+    span{
+        color: white;
+        font-size: 14px;
+    }
+}
+.second-flex{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 43px;
+}
+.men-text{
+    margin-top: 75px;
+    text-transform: uppercase;
+    margin-bottom: 50px;
+    
+    @include font(18px, 700, 3px ,rgb(51,51,51));
+    &:after{
+        content: '';
+        height: 2px;
+        display: block;
+        width: inherit;
+        margin-left: 55px;
+        margin-top: -10px;
+        background: #cccccc;
+    }
+}
+.last-next{
+    height: 35px;
+    margin-bottom: 10px;
+}
+.flex-men{
+    display: flex;
+    justify-content: space-between;
+    .box{
+        background: #f5f6f7;
+        padding: 15px 18px;
+        
+        &:hover{
+            border: 5px solid #aa9b77;
+        }
+        flex: 1 1 33.333%;
+        height: 360px;
+        margin-right: 60px;
+        &:last-child{
+            margin: 0px;
+        }
+        .size{
+            display: inline-block;
+            text-transform: uppercase;
+            @include font(16px, 700, 3px ,rgb(51,51,51));
+        }
+        img{
+            display: inline-block;
+            margin-top: 17px;
+        }
+    }
+}
+.color{
+    display: inline-block;
+    margin-left: 179px;
+    margin-top: 5px;
+}
+button{
+    width: 25px;
+    height: 25px;
+    border-radius: 15px;
+    display: inline-block;
+    margin-right: 6px;
+    
+}
+.blue{
+    background: #4c68a3;
+}
+.yellow{
+    background: #ffe637;
+}
+.gray{
+    background: #535253;
+}
+.rouse{
+    background: #d3a7ac;
+}
+.white{
+    background:white;
+}
+.box-img{
+    display: inline-block;
+    padding:0 auto;
+}
+.flex__price{
+    display: flex;
+    justify-content: space-between;
+    .t-shirt{
+        text-transform: uppercase;
+        @include font(18px, 600, 0px ,#aa9b77);
+
+    }
+    .price{
+        @include font(22px, 700, 0px ,#424242);
+        
+    }
+}
+.box-flex{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 40px;
+    .all__size{
+        align-self: flex-start;
+    }
+}
+.flex-women{
+    display: flex;
+    justify-content: space-between;
+    .box{
+        background: #f5f6f7;
+        padding: 15px 18px;
+        
+        &:hover{
+            border: 5px solid #aa9b77;
+        }
+        flex: 1 1 33.333%;
+        height: 360px;
+        margin-right: 60px;
+        &:last-child{
+            margin: 0px;
+        }
+        .size{
+            display: inline-block;
+            text-transform: uppercase;
+            @include font(16px, 700, 3px ,rgb(51,51,51));
+        }
+        img{
+            display: inline-block;
+            margin-top: 17px;
+        }
+    }
+}
+
+.footer__social_text{
+    padding-top: 25px;
+}
+
+.flex-end {
+    display: flex;
+    justify-content: space-between;
+    .flex-end__text {
+        width: 312px;
+        h2{
+            margin-top: 97px;
+            margin-bottom: 15px;
+            text-transform: uppercase;
+            @include font(20px, 700, 3px ,rgb(255, 255, 255));
+        }
+        .text-end {
+            line-height: 17px;
+            @include font(10px, 400, 1px ,rgb(255, 255, 255));
+        }
+}
+}
+
+.flex-end__contact {
+    padding-top: 140px;
+    .link__contact a{
+        text-transform: uppercase;
+        line-height: 25px;
+        @include font(14px, 400, 1px ,rgb(255, 255, 255));
+        &:after{
+            content: '|';
+            display: inline-block;
+            margin-left: 5px;
+            color: #aa9b77;
+        }
+    }
+    .designe{
+        @include font(14px, 400, 1px ,rgb(255, 255, 255));
+    }
+}
+/*картинкам применить flex 1 1 auto тогда цена будет прижиматься к низу всегда */
